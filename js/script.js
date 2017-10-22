@@ -8,7 +8,6 @@ $(document).ready(function () {
         toggleSidePanel();
     });
     $("#stjohn-path").on('click', function() {
-        console.log("eyyy");
         window.location.href = "stjohn.html"
     });
 });
@@ -20,3 +19,13 @@ function toggleSidePanel () {
         $("#sidepanel").addClass('active');
     }
 }
+
+$('.marker').bind('click', function() {
+    $('.card').addClass('active');
+    $('.marker').addClass('inactive');
+});
+
+$('.card').bind('click', function() {
+    $('.card').removeClass('active');
+    $('.marker').removeClass('inactive');
+});
