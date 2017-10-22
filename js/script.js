@@ -7,9 +7,9 @@ $(document).ready(function () {
     $("#sidepanel-toggle").on('click', function () {
         toggleSidePanel();
     });
-    $("#test-path").on('click', function() {
+    $("#stjohn-path").on('click', function() {
         console.log("eyyy");
-        window.location.href = "stgeorge.html"
+        window.location.href = "stjohn.html"
     });
 });
 
