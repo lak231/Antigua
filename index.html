@@ -1,20 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Antigua Map</title>
-    <link href = "css/khoi_s.css" rel = "stylesheet" type = "text/css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-          rel="stylesheet">
+    <link href="css/khoi_s.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
+
 <body style="margin: 0; padding: 0">
-<svg id="map" xmlns="http://www.w3.org/2000/svg" width="1800" height="1942" viewBox="0 0 1800 1942">
-    <metadata><?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
-        <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
-            <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
-                <rdf:Description rdf:about=""/>
-            </rdf:RDF>
-        </x:xmpmeta>
+    <div id="sidepanel">
+        <div id="description">
+            <p style="font-family: 'Oswald', sans-serif; font-style: normal; font-size: 34px;"> Antigua Map </p>
+            <p> Blah blah blah</p>
+        </div>
+        <div id="panel">
+            <div id="search">
+                <a onclick="search()" id="searchIcon">
+                    <i class="material-icons"> search </i>
+                </a>
+                <label>
+                    <input id="aSearch" type="search" onkeypress="handle(event)" placeholder="Search for titles, researchers, or tags..." required>
+                </label>
+            </div>
+
+            <div id="mills" class="expandable_list"> Mills
+            </div>
+
+            <div id="parishes" class="expandable_list"> Parishes
+            </div>
+
+        </div>
+        <footer>
+            <a href="http://goo.gl/forms/172JYJC1KJLtQzr13" id="feedback" target="_blank">
+                <i class="material-icons"> announcement </i>
+            </a>
+        </footer>
+    </div>
+
+    <svg id="map" xmlns="http://www.w3.org/2000/svg" width="1800" height="1942" viewBox="0 0 1800 1942">
+        <metadata>
+            <?xpacket begin="﻿" id="W5M0MpCehiHzreSzNTczkc9d"?>
+                <x:xmpmeta xmlns:x="adobe:ns:meta/" x:xmptk="Adobe XMP Core 5.6-c142 79.160924, 2017/07/13-01:06:39        ">
+                    <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
+                        <rdf:Description rdf:about="" />
+                    </rdf:RDF>
+                </x:xmpmeta>
 
         <?xpacket end="w"?></metadata>
     <defs>
@@ -59,34 +90,6 @@
 
 </svg>
 
-<div id = "sidepanel" class="active">
-    <button type="button" id="sidepanel-toggle"><i class="material-icons">menu</i></button>
-    <div id="header">
-        <div id="description">
-            <p style="font-family: 'Oswald', sans-serif; font-style: normal; font-size: 34px;"> Antigua Map </p>
-            <p> Blah blah blah</p>
-        </div>
-    </div>
-
-    <div class="panel">
-        <div id="search">
-            <a onclick="search()" id="searchIcon"> <i class="material-icons"> search </i> </a>
-            <label>
-                <input id="aSearch" type="search" onkeypress="handle(event)" placeholder="Search for titles, researchers, or tags..." required>
-            </label>
-        </div>
-
-        <div id="areas">
-        </div>
-
-        <div id="popularTags">
-        </div>
-
-    </div>
-    <footer>
-        <a href="http://goo.gl/forms/172JYJC1KJLtQzr13" id="feedback" target="_blank"> <i class="material-icons"> announcement </i> </a>
-    </footer>
-</div>
 
 </body>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

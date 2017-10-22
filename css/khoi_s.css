@@ -1,22 +1,17 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans|Open+Sans+Condensed:300|Oswald|Slabo+27px';
-
-body,  html {
+body,
+html {
     height: 100%;
     margin: 0;
     padding: 0;
     background-color: #ffecce;
+    display: flex;
 }
 
 .parish-map {
     height: 100%;
-    display:block;
+    display: block;
     margin: auto;
-}
-#description{
-    text-align: center;
-    font-style: italic;
-    font-family: 'Open Sans Condensed', sans-serif;
-    font-size: 16px;
 }
 
 #sidepanel {
@@ -25,77 +20,67 @@ body,  html {
     padding: 30px;
     background-color: #1C1D21;
     height: calc(100vh - 60px);
-    width: 490px;
+    width: 20%;
     min-height: 830px;
-    position: absolute;
     vertical-align: middle;
     text-align: left;
     font-family: "Open Sans", sans-serif;
     color: #eeeff7;
-    transform: translate3d(-550px, 0, 0);
-    transition: transform 0.3s;
-    z-index: 10;
-
 }
 
-#sidepanel.active {
-    transform: translate3d(0, 0, 0);
-    transition: transform 0.3s;
-    box-shadow: 20px 0 50px -5px rgba(0,0,0,0.75);
-}
-
-#sidepanel-toggle {
-    position: absolute;
-    top: 100px;
-    text-decoration: none;
-    background-color: #551f00;
-    font-size: 24px;
-    border: none;
-    cursor: pointer;
-    color: white;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 5px;
-    padding-right: 5px;
+#description {
     text-align: center;
-    right: -34px;
+    font-style: italic;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 16px;
 }
 
-#sidepanel-toggle:hover {
-    background-color: #d9581f;
-    transition: transform 0.3s;
+#panel {
+    text-align: center;
+    font-style: italic;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 16px;
+}
+
+.expandable_list {
+    width: 100%;
+    height: 3vh;
+    text-align: center;
+    font-style: italic;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-size: 16px;
 }
 
 #map {
     height: 100vh;
     min-height: 890px;
-    position: absolute;
-    width: 100%;
-    min-width: 890px;
     overflow: hidden;
 }
+
 
 /*
  * InfoWindow styling
  */
 
-
 #search {
-    padding-top: 24px;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
 }
 
 .material-icons {
     vertical-align: middle;
 }
 
+
 /* Search 3 - zoom in looking glass */
-#search{
+
+#search {
     width: 100%;
     vertical-align: middle;
     white-space: nowrap;
 }
 
-#aSearch{
+#aSearch {
     padding-bottom: 10px;
     color: #eeeff7;
     width: calc(100% - 30px);
@@ -107,31 +92,37 @@ body,  html {
     font-family: "Open Sans", sans-serif;
 }
 
-#aSearch:focus, #aSearch:hover{
+#aSearch:focus,
+#aSearch:hover {
     border-bottom: 2px solid #FF5E17;
 }
 
 #aSearch::-webkit-input-placeholder {
     color: #65737e;
 }
-#aSearch:-moz-placeholder { /* Firefox 18- */
+
+#aSearch:-moz-placeholder {
+    /* Firefox 18- */
     color: #65737e;
 }
-#aSearch::-moz-placeholder {  /* Firefox 19+ */
+
+#aSearch::-moz-placeholder {
+    /* Firefox 19+ */
     color: #65737e;
 }
+
 #aSearch:-ms-input-placeholder {
     color: #65737e;
 }
 
-#searchIcon{
+#searchIcon {
     text-decoration: none;
     color: #eeeff7;
     float: right;
     cursor: pointer;
 }
 
-#searchIcon:hover{
+#searchIcon:hover {
     color: #FF5E17;
     transition: all 0.3s;
 }
@@ -203,11 +194,9 @@ footer {
         cursor: pointer;
         background: rgba(228, 93, 39, 0.5);
     }
-
     .info_button:hover {
         background: rgba(228, 93, 39, 0.8);
     }
-
     .info {
         opacity: 0;
         display: none;
@@ -217,15 +206,12 @@ footer {
         top: 120%;
         margin: auto;
     }
-
-    .info_button:hover > .info {
+    .info_button:hover>.info {
         opacity: 1;
         display: block;
     }
-
-    .info_button > .info:hover {
+    .info_button>.info:hover {
         opacity: 0;
         display: none;
     }
 }
-
