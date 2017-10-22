@@ -9,16 +9,12 @@
 </head>
 
 <body style="margin: 0; padding: 0">
-    <div id="sidepanel" class="active">
-
-        <div id="header">
-            <div id="description">
-                <p style="font-family: 'Oswald', sans-serif; font-style: normal; font-size: 34px;"> Antigua Map </p>
-                <p> Blah blah blah</p>
-            </div>
+    <div id="sidepanel">
+        <div id="description">
+            <p style="font-family: 'Oswald', sans-serif; font-style: normal; font-size: 34px;"> Antigua Map </p>
+            <p> Blah blah blah</p>
         </div>
-
-        <div class="panel">
+        <div id="panel">
             <div id="search">
                 <a onclick="search()" id="searchIcon">
                     <i class="material-icons"> search </i>
@@ -28,10 +24,10 @@
                 </label>
             </div>
 
-            <div id="areas">
+            <div id="mills" class="expandable_list"> Mills
             </div>
 
-            <div id="popularTags">
+            <div id="parishes" class="expandable_list"> Parishes
             </div>
 
         </div>
