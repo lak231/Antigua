@@ -1,53 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>St. John's Parish</title>
-    <link href = "css/khoi_s.css" rel = "stylesheet" type = "text/css" />
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
-          rel="stylesheet">
+    <link href="css/khoi_s.css" rel="stylesheet" type="text/css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
-<body>
-<div id="map">
-    <img style="height: 100%; display:block; margin: auto" src="res/St.JohnsParish.jpg">
-    <div class="info_button">
-        <div class=info" style="display: none;">
-            <img src="https://vignette.wikia.nocookie.net/vsbattles/images/c/c2/Alarakk.jpg/revision/latest?cb=20170212144952">
-        </div>
-    </div>
-</div>
 
-<div id = "sidepanel" class="active">
-    <button type="button" id="sidepanel-toggle"><i class="material-icons">menu</i></button>
-    <div id="header">
+<body style="margin: 0; padding: 0">
+    <div id="sidepanel">
         <div id="description">
             <p style="font-family: 'Oswald', sans-serif; font-style: normal; font-size: 34px;"> Antigua Map </p>
             <p> Blah blah blah</p>
         </div>
+        <div id="panel">
+            <div id="search">
+                <a onclick="search()" id="searchIcon">
+                    <i class="material-icons"> search </i>
+                </a>
+                <label>
+                    <input id="aSearch" type="search" onkeypress="handle(event)" placeholder="Search for titles, researchers, or tags..." required>
+                </label>
+            </div>
+
+            <div id="mills" class="expandable_list"> Mills
+            </div>
+
+            <div id="parishes" class="expandable_list"> Parishes
+            </div>
+
+        </div>
+        <a href="http://goo.gl/forms/172JYJC1KJLtQzr13" id="feedback" target="_blank">
+            <i class="material-icons"> announcement </i>
+        </a>
     </div>
-
-    <div class="panel">
-        <div id="search">
-            <a onclick="search()" id="searchIcon"> <i class="material-icons"> search </i> </a>
-            <label>
-                <input id="aSearch" type="search" onkeypress="handle(event)" placeholder="Search for titles, researchers, or tags..." required>
-            </label>
-        </div>
-
-        <div id="areas">
-        </div>
-
-        <div id="popularTags">
-        </div>
-
-    </div>
-    <footer>
-        <a href="http://goo.gl/forms/172JYJC1KJLtQzr13" id="feedback" target="_blank"> <i class="material-icons"> announcement </i> </a>
-    </footer>
-</div>
-
+    <div id="map">
+        <img style="height: 100%; display:block; margin: auto" src="res/St.JohnsParish.jpg">
+        <div class="info_button">
+            <div class=info " style="display: none; ">
+                                <img src="https://vignette.wikia.nocookie.net/vsbattles/images/c/c2/Alarakk.jpg/revision/latest?cb=20170212144952 ">
+                            </div>
+                        </div>
+                </div>
+               
 </body>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="js/script.js"></script>
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
+<script src="js/script.js "></script>
 
 </html>
