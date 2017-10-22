@@ -6,6 +6,7 @@ html {
     padding: 0;
     background-color: #ffecce;
     display: flex;
+    transition: all 0.5s ease;
 }
 
 .parish-map {
@@ -51,20 +52,49 @@ html {
     font-size: 16px;
 }
 
+.expandable_list::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    background-color: white;
+}
+
+.expandable_list::-webkit-scrollbar {
+    width: 15px;
+    background-color: transparent;
+}
+
+.expandable_list::-webkit-scrollbar-thumb {
+    border-radius: 15px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
+    background-color: #D62929;
+}
+
 .expandable_list {
-    width: 100%;
-    height: 3vh;
+    height: 0vh;
     text-align: center;
     font-style: italic;
     font-family: 'Open Sans Condensed', sans-serif;
     font-size: 16px;
+    overflow-y: scroll;
+    transition: all 0.5s ease-out 0.15s;
 }
 
-#big_map{
-    height: 100vh;  
+.expandable_list:hover {
+    height: 30vh;
+    transition: all 0.5s ease-out 0.15s;
+}
+
+.menu_title:hover~.expandable_list {
+    height: 30vh;
+    transition: all 0.5s ease-out 0.15s;
+}
+
+#big_map {
+    height: 100vh;
     width: 80vw;
     overflow: hidden;
 }
+
 #map {
     overflow: hidden;
 }
